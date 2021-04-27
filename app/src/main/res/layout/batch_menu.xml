@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#BDBDBD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bobbys_better_beer_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/logo">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/batch_grav_id"
+                    android:layout_width="80dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/material_edittext"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="number"
+                    android:hint="G ID"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColorHint="#999999"
+                    android:textColor="#777777"/>
+
+                <EditText
+                    android:id="@+id/batch_carboy_id"
+                    android:layout_width="80dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/material_edittext"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:inputType="number"
+                    android:hint="C ID"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColorHint="#999999"
+                    android:textColor="#777777"/>
+
+                <EditText
+                    android:id="@+id/batch_temp"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/material_edittext"
+                    android:elevation="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="number"
+                    android:hint="Temp"
+                    android:textAlignment="center"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:textColorHint="#999999"
+                    android:textColor="#777777"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/batch_name"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_edittext"
+                android:elevation="2dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="text"
+                android:hint="BrewFather Batch Name"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColorHint="#999999"
+                android:textColor="#777777"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="start_batch"
+                android:text="Start Batch"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666666" />
+
+            <EditText
+                android:id="@+id/batch_stop_carboy_id"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_edittext"
+                android:elevation="2dp"
+                android:layout_marginBottom="10dp"
+                android:inputType="text"
+                android:hint="Carboy ID"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColorHint="#999999"
+                android:layout_marginTop="40dp"
+                android:textColor="#777777"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="stop_batch"
+                android:text="Stop Batch"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666666" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

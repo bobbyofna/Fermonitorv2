@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#BDBDBD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/bobbys_better_beer_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/logo">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="grav"
+                android:text="Manage Grav Sensors"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="carboy"
+                android:text="Manage Carboys"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="batch"
+                android:text="Manage Batches"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666666" />
+
+            <EditText
+                android:id="@+id/rpi_ip_address"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_edittext"
+                android:elevation="2dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="40dp"
+                android:inputType="text"
+                android:hint="RPi IP Address"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColorHint="#999999"
+                android:textColor="#777777"/>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="setIP"
+                android:text="Set RPi IP Address"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666666" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
