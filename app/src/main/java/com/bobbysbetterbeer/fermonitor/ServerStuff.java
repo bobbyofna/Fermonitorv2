@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import org.json.JSONObject;
 import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
@@ -48,8 +49,8 @@ public class ServerStuff extends Thread {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                URL url = new URL("https://" + Variables.IP_ADDRESS.get() + endpoint);
-                HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
+                URL url = new URL("http://" + Variables.IP_ADDRESS.get() + endpoint);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type", "application/json");
                 conn.setRequestProperty("Accept", "application/json");
