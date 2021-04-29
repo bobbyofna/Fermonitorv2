@@ -46,6 +46,25 @@ public class Carboy extends AppCompatActivity {
         } catch (JSONException e) {}
     }
 
+    public void delete(View view) {
+        int _id = Integer.parseInt("" + ((EditText) findViewById(R.id.update_carboy_id)).getText());
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("app_key", "" + Variables.APP_KEY.get());
+            jsonObject.put("_id", _id);
+
+            new Thread(new ServerStuff("/carboy/" + _id + "/delete", jsonObject)).start();
+        } catch (JSONException e) {}
+    }
+
+    public void print_carboys(View view) {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("app_key", "" + Variables.APP_KEY.get());
+            new Thread(new ServerStuff("/carboy/print", jsonObject)).start();
+        } catch (JSONException e) {}
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, Main.class);

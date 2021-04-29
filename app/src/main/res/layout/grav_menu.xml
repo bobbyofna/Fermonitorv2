@@ -141,6 +141,31 @@
                 android:text="Start Calibration"
                 android:layout_marginBottom="10dp"
                 android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="delete"
+                android:text="Delete Grav"
+                android:layout_marginBottom="10dp"
+                android:textColor="#666666" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@drawable/material_button"
+                android:elevation="2dp"
+                android:textSize="15sp"
+                android:onClick="print_gravs"
+                android:text="Print Grav DB Info"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="40dp"
+                android:textColor="#666666" />
         </LinearLayout>
     </RelativeLayout>
 </RelativeLayout>

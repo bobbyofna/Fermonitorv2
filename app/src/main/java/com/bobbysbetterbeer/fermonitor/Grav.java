@@ -45,6 +45,25 @@ public class Grav extends AppCompatActivity {
         } catch (JSONException e) {}
     }
 
+    public void delete(View view) {
+        int _id = Integer.parseInt("" + ((EditText) findViewById(R.id.cal_grav_id)).getText());
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("app_key", "" + Variables.APP_KEY.get());
+            jsonObject.put("_id", _id);
+
+            new Thread(new ServerStuff("/grav/" + _id + "/delete", jsonObject)).start();
+        } catch (JSONException e) {}
+    }
+
+    public void print_gravs(View view) {
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("app_key", "" + Variables.APP_KEY.get());
+            new Thread(new ServerStuff("/grav/print", jsonObject)).start();
+        } catch (JSONException e) {}
+    }
+
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, Main.class);
